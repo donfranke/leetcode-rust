@@ -16,5 +16,9 @@ fn main() {
     // initial array - array to concatenate
     let v1 = vec![1,3,2,1];
     let v2 = Solution::get_concatenation(v1);
+    
+    // display results
     for i in v2 {
+        println!("{}", i);
+    }
 }
