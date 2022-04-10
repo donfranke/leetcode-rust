@@ -7,7 +7,6 @@ struct Solution {
 impl Solution {
     pub fn maximum_wealth(accounts: Vec<Vec<i32>>) -> i32 {
         let mut highestbalance = 0;
-        
         for (_, account) in accounts.iter().enumerate() {
             let mut k = 0;
             for (_, balance) in account.iter().enumerate() {
@@ -17,7 +16,6 @@ impl Solution {
                 highestbalance = k;
             }
         }
-        
         highestbalance
     }
 }
