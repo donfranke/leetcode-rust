@@ -37,6 +37,9 @@ impl Solution {
 }
 
 fn main() {
+    println!("{}","Hello World".replace("Hello", "Greetings").replace("World","Planet"));
+
+
     let v1: Vec<String> = vec![
             "8".into(),
             "4".into(),
