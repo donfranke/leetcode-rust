@@ -24,7 +24,7 @@ impl Solution {
 }
 
 fn main() {
-    println!("Use tests to execute function");
+    println!("!! Use tests to execute function !!");
 }
 
 #[cfg(test)]
