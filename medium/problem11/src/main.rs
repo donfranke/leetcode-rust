@@ -7,7 +7,6 @@ impl Solution {
         // use deci-binary numbers (numbers that contain 1 or 0) to equal n
         // must be minimum number of deci-binary numbers
         // available options: 01, 10, 11
-        // try each option, deal with remainder
         1
     }
 }
