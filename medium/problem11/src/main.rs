@@ -4,10 +4,15 @@ struct Solution {}
 
 impl Solution {
     pub fn min_partitions(n: String) -> i32 {
-        // use deci-binary numbers (numbers that contain 1 or 0) to equal n
-        // must be minimum number of deci-binary numbers
-        // available options: 01, 10, 11
-        1
+        let mut highest_num = 0;
+        let cs = n.chars();
+        for c in cs {
+            let num = c.to_digit(10).unwrap();
+            if num > highest_num {
+                highest_num = num;
+            }
+        }
+        highest_num as i32
     }
 }
 
@@ -31,5 +36,30 @@ mod tests {
         let ret = Solution::min_partitions(s);
 
         assert!(ret == target, "item 1 {} ", ret);
+    }
+
+    #[test]
+    fn test2() {
+        // Input: n = "82734"
+        // Output: 8
+        let s: String = "82734".to_string();
+        let target = 8;
+
+        let ret = Solution::min_partitions(s);
+
+        assert!(ret == target, "item 2 {} ", ret);
+    }
+
+    #[test]
+    fn test3() {
+        // Input: n = "27346209830709182346"
+        // Output: 9
+
+        let s: String = "27346209830709182346".to_string();
+        let target = 9;
+
+        let ret = Solution::min_partitions(s);
+
+        assert!(ret == target, "item 3 {} ", ret);
     }
 }
